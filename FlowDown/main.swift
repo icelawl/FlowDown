@@ -21,14 +21,16 @@
 #endif
 
 #if os(macOS) || targetEnvironment(macCatalyst)
-    do {
-        // make sure sandbox is enabled otherwise panic the app
-        let sandboxTestDir = URL(fileURLWithPath: "/tmp/sandbox.test.\(UUID().uuidString)")
-        FileManager.default.createFile(atPath: sandboxTestDir.path, contents: nil, attributes: nil)
-        if FileManager.default.fileExists(atPath: sandboxTestDir.path) {
-            fatalError("This app should not run outside of sandbox which may cause trouble.")
+    #if !DEBUG
+        do {
+            // 确保在发布版本中启用了沙盒，否则崩溃
+            let sandboxTestDir = URL(fileURLWithPath: "/tmp/sandbox.test.\(UUID().uuidString)")
+            FileManager.default.createFile(atPath: sandboxTestDir.path, contents: nil, attributes: nil)
+            if FileManager.default.fileExists(atPath: sandboxTestDir.path) {
+                fatalError("This app should not run outside of sandbox which may cause trouble.")
+            }
         }
-    }
+    #endif
 #endif
 
 import ConfigurableKit
