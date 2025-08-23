@@ -38,6 +38,12 @@ extension SettingController {
                 ephemeralAnnotation: .page { ToolsController() }
             ),
             .init(
+                icon: "moon.stars",
+                title: String(localized: "Memory Management"),
+                explain: String(localized: "Manage AI memory tools and stored conversation memories."),
+                ephemeralAnnotation: .page { MemoryController() }
+            ),
+            .init(
                 icon: "lock.shield",
                 title: String(localized: "Data Control"),
                 explain: String(localized: "Get control of your data, export or delete."),
@@ -144,6 +150,8 @@ extension SettingController.EntryPage {
             return SettingController.SettingContent.ToolsController()
         case .mcp:
             return SettingController.SettingContent.MCPController()
+        case .memory:
+            return SettingController.SettingContent.MemoryController()
         case .dataControl:
             return SettingController.SettingContent.DataControlController()
         case .permissionList:

@@ -280,12 +280,72 @@
         }
       }
     },
+    "All memory data is stored locally on your device. Export operations allow you to backup your memory data." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼所有记忆数据都本地存储在您的设备上。导出操作可让您备份记忆数据。"
+          }
+        }
+      }
+    },
     "Allowed in Foreground" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用时允许"
+          }
+        }
+      }
+    },
+    "Allows AI to delete specific memories that are no longer needed." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼允许 AI 删除不再需要的特定记忆。"
+          }
+        }
+      }
+    },
+    "Allows AI to list memories with IDs for management operations." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼允许 AI 列出带 ID 的记忆，以进行管理操作。"
+          }
+        }
+      }
+    },
+    "Allows AI to retrieve stored memories for context." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼允许 AI 检索已存储的记忆，以提供上下文。"
+          }
+        }
+      }
+    },
+    "Allows AI to store important information for future conversations." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼允许 AI 存储重要信息，以用于未来的对话。"
+          }
+        }
+      }
+    },
+    "Allows AI to update existing memory content." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼允许 AI 更新现有的记忆内容。"
           }
         }
       }
@@ -407,6 +467,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你确定要删除所有的对话和相关数据吗？"
+          }
+        }
+      }
+    },
+    "Are you sure you want to delete all stored memories? This action cannot be undone." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼您确定要删除所有已存储的记忆吗？此操作无法撤销。"
           }
         }
       }
@@ -538,6 +608,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "必应搜索"
+          }
+        }
+      }
+    },
+    "Browse, search, and manage stored memories." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼浏览、搜索和管理已存储的记忆。"
           }
         }
       }
@@ -808,6 +888,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清空"
+          }
+        }
+      }
+    },
+    "Clear All" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除"
+          }
+        }
+      }
+    },
+    "Clear All Memories" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除全部记忆"
           }
         }
       }
@@ -1358,6 +1458,16 @@
         }
       }
     },
+    "Data Management" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据管理"
+          }
+        }
+      }
+    },
     "Database" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1438,6 +1548,16 @@
         }
       }
     },
+    "Delete all stored memories permanently." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "永久删除所有储存的记忆。"
+          }
+        }
+      }
+    },
     "Delete Chat" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1464,6 +1584,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "删除图标"
+          }
+        }
+      }
+    },
+    "Delete Memory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除记忆"
           }
         }
       }
@@ -2182,6 +2312,16 @@
         }
       }
     },
+    "Export all memories as JSON file." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导出所有记忆到 JSON 文件。"
+          }
+        }
+      }
+    },
     "Export Database" : {
       "localizations" : {
         "zh-Hans" : {
@@ -2192,12 +2332,32 @@
         }
       }
     },
+    "Export Failed" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导出失败"
+          }
+        }
+      }
+    },
     "Export MCP Server" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "导出服务器"
+          }
+        }
+      }
+    },
+    "Export Memories" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导出记忆"
           }
         }
       }
@@ -2362,6 +2522,16 @@
         }
       }
     },
+    "Failed to clear memories: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法清除记忆：%@"
+          }
+        }
+      }
+    },
     "Failed to Compress Conversation" : {
       "localizations" : {
         "zh-Hans" : {
@@ -2388,6 +2558,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "无法解码数据。"
+          }
+        }
+      }
+    },
+    "Failed to delete memory: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法删除记忆：%@"
           }
         }
       }
@@ -2428,6 +2608,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "无法导出"
+          }
+        }
+      }
+    },
+    "Failed to export memories: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法导出记忆：%@"
           }
         }
       }
@@ -3183,6 +3373,16 @@
         }
       }
     },
+    "Invalid memory content" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无效的记忆内容"
+          }
+        }
+      }
+    },
     "Invalid model configuration." : {
       "localizations" : {
         "zh-Hans" : {
@@ -3209,6 +3409,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "无效的模型标识符。"
+          }
+        }
+      }
+    },
+    "Invalid parameters. Both memory_id and new_content are required." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无效的参数。memory_id 和 new_content 必须提供。"
+          }
+        }
+      }
+    },
+    "Invalid parameters. memory_id is required." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无效的参数。memory_id 必须提供。"
           }
         }
       }
@@ -3320,6 +3540,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "列举要点"
+          }
+        }
+      }
+    },
+    "List Memories" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "列出记忆"
           }
         }
       }
@@ -3476,6 +3706,16 @@
         }
       }
     },
+    "Manage AI memory tools and stored conversation memories." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼管理 AI 记忆工具和已存储的对话记忆。"
+          }
+        }
+      }
+    },
     "Manage language model providers or download local models." : {
       "localizations" : {
         "zh-Hans" : {
@@ -3583,6 +3823,56 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中等"
+          }
+        }
+      }
+    },
+    "Memories Cleared" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记忆已清除"
+          }
+        }
+      }
+    },
+    "Memory List" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "列出记忆"
+          }
+        }
+      }
+    },
+    "Memory Management" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记忆管理"
+          }
+        }
+      }
+    },
+    "Memory stored successfully: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记忆储存成功：%@"
+          }
+        }
+      }
+    },
+    "Memory Tools" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记忆工具"
           }
         }
       }
@@ -3995,6 +4285,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "位置信息未找到。"
+          }
+        }
+      }
+    },
+    "No Memories" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有记忆"
           }
         }
       }
@@ -4713,6 +5013,16 @@
         }
       }
     },
+    "Recall Memory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "调取记忆"
+          }
+        }
+      }
+    },
     "Recent Used" : {
       "localizations" : {
         "zh-Hans" : {
@@ -4959,6 +5269,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "搜索限制"
+          }
+        }
+      }
+    },
+    "Search memories..." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索记忆"
           }
         }
       }
@@ -5312,6 +5632,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "省：%@"
+          }
+        }
+      }
+    },
+    "Store Memory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "储存记忆"
           }
         }
       }
@@ -5725,7 +6055,7 @@
         }
       }
     },
-    "The system provides several tools for your convenience. Please use them wisely and according to the user’s query. Avoid requesting information that is already provided or easily inferred." : {
+    "The system provides several tools for your convenience. Please use them wisely and according to the user's query. Avoid requesting information that is already provided or easily inferred." : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -5765,6 +6095,16 @@
         }
       }
     },
+    "There are no memories to export." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有可导出的记忆。"
+          }
+        }
+      }
+    },
     "These are the open-source licenses for the frameworks used in this app." : {
       "localizations" : {
         "zh-Hans" : {
@@ -5781,6 +6121,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "这些操作不可撤销。"
+          }
+        }
+      }
+    },
+    "These tools allow the AI to store, recall, and manage important information from conversations for better context awareness." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "￼这些工具允许 AI 存储、回忆和管理对话中的重要信息，以提供更佳的上下文感知能力。"
           }
         }
       }
@@ -6453,6 +6803,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "更新可用"
+          }
+        }
+      }
+    },
+    "Update Memory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新记忆"
           }
         }
       }

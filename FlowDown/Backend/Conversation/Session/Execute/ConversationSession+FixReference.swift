@@ -7,8 +7,61 @@
 
 import ChatClientKit
 import Foundation
+import MarkdownParser
 import RegexBuilder
 import Storage
+
+private let numberWithHat = Regex {
+    ZeroOrMore(.whitespace)
+    One("^")
+    OneOrMore(.digit)
+    ZeroOrMore(.whitespace)
+}
+
+private let numberWithOptionalHat = Regex {
+    ZeroOrMore(.whitespace)
+    Optionally("^")
+    OneOrMore(.digit)
+    ZeroOrMore(.whitespace)
+}
+
+private let regex = Regex {
+    "["
+
+    Capture {
+        numberWithHat
+        ZeroOrMore {
+            ","
+            numberWithOptionalHat
+        }
+    }
+
+    "]"
+
+    NegativeLookahead {
+        "("
+        ZeroOrMore(.any)
+        ")"
+    }
+
+    Anchor.wordBoundary
+}
+
+private let prevent: [MarkdownNodeType] = [
+    .blockquote,
+    .codeBlock,
+    .htmlBlock,
+    .customBlock,
+    .thematicBreak,
+    .code,
+    .html,
+    .customInline,
+    .emphasis, // 强调
+    .strong,
+    .link,
+    .image,
+    .strikethrough,
+]
 
 extension ConversationSession {
     func fixWebReferenceIfPossible(
@@ -18,38 +71,28 @@ extension ConversationSession {
         if content.isEmpty || contentLink.isEmpty { return content }
 
         var content = content
+        let map = MarkdownParser().parseBlockRange(content)
 
-        let numberWithOptionalHat = Regex {
-            ZeroOrMore(.whitespace)
-            Optionally("^")
-            OneOrMore(.digit)
-            ZeroOrMore(.whitespace)
-        }
-        let regex = Regex {
-            "["
+        var duplicationTerminator: String.Index? = nil
 
-            Capture {
-                numberWithOptionalHat
-                ZeroOrMore {
-                    ","
-                    numberWithOptionalHat
+        let reverseOrderedMatches = content.matches(of: regex)
+            .sorted { $0.range.lowerBound > $1.range.lowerBound } // going from end to start
+            .filter { input in
+                if let duplicationTerminator {
+                    guard input.range.lowerBound < duplicationTerminator,
+                          input.range.upperBound < duplicationTerminator
+                    else {
+                        assertionFailure()
+                        return false
+                    }
+                    return true
                 }
+                duplicationTerminator = input.range.lowerBound
+                return true
             }
 
-            "]"
-
-            NegativeLookahead {
-                "("
-                ZeroOrMore(.any)
-                ")"
-            }
-
-            Anchor.wordBoundary
-        }
-
-        let matches = content.matches(of: regex)
-        var replaceMap: [Range<String.Index>: String] = [:]
-        for match in matches {
+        // now going from back to forward
+        for match in reverseOrderedMatches {
             let source = match.output.1
                 .replacingOccurrences(of: "^", with: "")
                 .replacingOccurrences(of: " ", with: "")
@@ -60,20 +103,26 @@ extension ConversationSession {
                 guard let result = contentLink[number] else { continue }
                 replacedLink.append("[^\(number)](\(result))")
             }
-
             if replacedLink.isEmpty {
                 // No valid reference found, removing this section.
-                replaceMap[match.range] = ""
-            } else {
-                replaceMap[match.range] = replacedLink.joined(separator: " ")
+                continue
             }
-        }
 
-        replaceMap
-            .sorted { $0.key.lowerBound > $1.key.lowerBound }
-            .forEach { range, replacement in
-                content.replaceSubrange(range, with: replacement)
+            let range = match.range
+            let type = map
+                .first { $0.startIndex <= range.lowerBound && $0.endIndex >= range.upperBound }?
+                .type
+
+            if let type, prevent.contains(type) {
+                // do not process content inside code block
+                print("[*] ignoring content inside block with type \(type)")
+                continue
             }
+
+            let replacement = replacedLink.joined(separator: " ")
+            print("[*] replacing \(source) with \(replacement) at range \(range)")
+            content.replaceSubrange(range, with: replacement)
+        }
 
         return content
     }

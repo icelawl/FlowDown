@@ -14,7 +14,7 @@ import UIKit
 class ModelToolsManager {
     static let shared = ModelToolsManager()
 
-    private let tools: [ModelTool]
+    let tools: [ModelTool]
 
     static let skipConfirmationKey = "ModelToolsManager.skipConfirmation"
     static var skipConfirmationValue: Bool {
@@ -46,6 +46,12 @@ class ModelToolsManager {
 //            MTLocationTool(),
 
                 MTURLTool(),
+
+                MTStoreMemoryTool(),
+                MTRecallMemoryTool(),
+                MTListMemoriesTool(),
+                MTUpdateMemoryTool(),
+                MTDeleteMemoryTool(),
             ]
         #else
             tools = [
@@ -60,6 +66,12 @@ class ModelToolsManager {
                 MTLocationTool(),
 
                 MTURLTool(),
+
+                MTStoreMemoryTool(),
+                MTRecallMemoryTool(),
+                MTListMemoriesTool(),
+                MTUpdateMemoryTool(),
+                MTDeleteMemoryTool(),
             ]
         #endif
 
@@ -95,6 +107,11 @@ class ModelToolsManager {
         tools.filter { tool in
             if tool is MTWaitForNextRound { return false }
             if tool is MTWebSearchTool { return false }
+            if tool is MTStoreMemoryTool { return false }
+            if tool is MTRecallMemoryTool { return false }
+            if tool is MTListMemoriesTool { return false }
+            if tool is MTUpdateMemoryTool { return false }
+            if tool is MTDeleteMemoryTool { return false }
             return true
         }
     }

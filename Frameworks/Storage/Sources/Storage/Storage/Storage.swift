@@ -39,6 +39,7 @@ public class Storage {
         try db.create(table: Message.table, of: Message.self)
         try db.create(table: Conversation.table, of: Conversation.self)
         try db.create(table: ModelContextServer.table, of: ModelContextServer.self)
+        try db.create(table: Memory.table, of: Memory.self)
     }
 
     public func reset() {
@@ -48,6 +49,7 @@ public class Storage {
             try handler.drop(table: Message.table)
             try handler.drop(table: Conversation.table)
             try handler.drop(table: ModelContextServer.table)
+            try handler.drop(table: Memory.table)
             return ()
         }
         db.blockade()
@@ -85,6 +87,8 @@ public extension Storage {
                     try expdb.insert(msgs, intoTable: Message.table)
                     let atts: [Attachment] = try db.getObjects(fromTable: Attachment.table)
                     try expdb.insert(atts, intoTable: Attachment.table)
+                    let mems: [Memory] = try db.getObjects(fromTable: Memory.table)
+                    try expdb.insert(mems, intoTable: Memory.table)
                     return true
                 } catch {
                     getError = error

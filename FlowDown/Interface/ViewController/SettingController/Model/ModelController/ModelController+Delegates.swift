@@ -62,7 +62,8 @@ extension SettingController.SettingContent.ModelController: UITableViewDelegate 
                 self.exportModel(itemIdentifier)
             })
             actions.append(UIAction(
-                title: String(localized: "Duplicate")
+                title: String(localized: "Duplicate"),
+                image: UIImage(systemName: "doc.on.doc")
             ) { _ in
                 switch itemIdentifier.type {
                 case .local:
@@ -78,6 +79,7 @@ extension SettingController.SettingContent.ModelController: UITableViewDelegate 
         }
         actions.append(UIAction(
             title: String(localized: "Delete"),
+            image: UIImage(systemName: "trash"),
             attributes: .destructive
         ) { _ in
             switch itemIdentifier.type {

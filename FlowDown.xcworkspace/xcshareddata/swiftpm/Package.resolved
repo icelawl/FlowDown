@@ -75,7 +75,7 @@
     {
       "identity" : "eventsource",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/loopwork-ai/eventsource",
+      "location" : "https://github.com/mattt/eventsource.git",
       "state" : {
         "revision" : "07957602bb99a5355c810187e66e6ce378a1057d",
         "version" : "1.1.1"
@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ktiays/GlyphixTextFx/",
       "state" : {
-        "revision" : "a4a0a0df21ab8c79f57525c08149b4d577ee2319",
-        "version" : "2.3.2"
+        "revision" : "e35b97c4b08b7aeaa9cca8dc3f9ae8d0fca398a8",
+        "version" : "2.3.4"
       }
     },
     {
@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/johnmai-dev/Jinja",
       "state" : {
-        "revision" : "fc1233dea1142897d474bda2f1f9a6c3fe7acab6",
-        "version" : "1.2.1"
+        "revision" : "bb238dd96fbe4c18014f3107c00edd6edb15428e",
+        "version" : "1.2.4"
       }
     },
     {
@@ -131,8 +131,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nicklockwood/LRUCache",
       "state" : {
-        "revision" : "542f0449556327415409ededc9c43a4bd0a397dc",
-        "version" : "1.0.7"
+        "revision" : "e0e9e039b33db8f2ef39b8e25607e38f46b13584",
+        "version" : "1.1.2"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/MarkdownView",
       "state" : {
-        "revision" : "1b0267f115274260d7cc875c4e9043f976f003a2",
-        "version" : "3.4.1"
+        "revision" : "c052f57768436212c91e4369d76181c38eaa3ba3",
+        "version" : "3.4.2"
       }
     },
     {
@@ -159,7 +159,7 @@
       "location" : "https://github.com/ml-explore/mlx-swift-examples/",
       "state" : {
         "branch" : "main",
-        "revision" : "6a5d1dfa29f27f67f1fd59c9b78d2eac069c9abf"
+        "revision" : "3557601979dae72739da17ec966cd13a1799a4b4"
       }
     },
     {
@@ -275,8 +275,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/modelcontextprotocol/swift-sdk",
       "state" : {
-        "revision" : "9742933d2ff250212a04aed39b123bcc63a21e9c",
-        "version" : "0.9.0"
+        "revision" : "f1b50e6de22b5206068bb09851d585f560d893c4",
+        "version" : "0.10.1"
       }
     },
     {
@@ -284,8 +284,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
-        "revision" : "b63d24d465e237966c3f59f47dcac6c70fb0bca3",
-        "version" : "1.6.1"
+        "revision" : "890830fff1a577dc83134890c7984020c5f6b43b",
+        "version" : "1.6.2"
       }
     },
     {
@@ -320,8 +320,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/scinfu/SwiftSoup",
       "state" : {
-        "revision" : "a81b1a5ac933dee8c6cfccf05d5ffcc5eb8c7ec4",
-        "version" : "2.10.0"
+        "revision" : "3a439f9eccc391b264d54516ce640251552eb0c4",
+        "version" : "2.10.3"
       }
     },
     {
@@ -329,8 +329,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Tencent/wcdb",
       "state" : {
-        "revision" : "db68d174876d4c50c9843d0e6e22c58adebf2431",
-        "version" : "2.1.11"
+        "revision" : "e94739e679decad8f99177d2fa5882e4a2409454",
+        "version" : "2.1.13"
       }
     },
     {
